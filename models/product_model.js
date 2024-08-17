@@ -6,6 +6,16 @@ const prodctSchema = new Schema({
         required: true,
         minlength: 3,
         maxlength: 100
+    },
+
+    price: {
+        type: Number,
+        required: true,
+    },
+
+    weight: {
+        type: String,
+        required: true
     }
 });
 
