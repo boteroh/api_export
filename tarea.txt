@@ -1,0 +1,6 @@
+Crear una api llamada exportación con los atributos:
+nameProduct, price, weight
+subir a git
+Desplegar en render
+Enviar el link de git
+URL de render

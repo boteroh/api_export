@@ -1,6 +1,6 @@
 const express = require('express');
 const dbconnect = require('../db/config');
-const { getProduct, postProduct } = require('../controllers/product.controller')
+const { getProduct, postProduct, putProduct, deleteProduct } = require('../controllers/product.controller')
 
 class Server {
     constructor() {
@@ -15,6 +15,8 @@ class Server {
         this.app.use(express.json());
         this.app.get(this.pathProduct, getProduct);
         this.app.post(this.pathProduct, postProduct);
+        this.app.put(this.pathProduct, putProduct);
+        this.app.delete(this.pathProduct + '/:nameProduct', deleteProduct);
     }
 
     async connectToDatabase() {
